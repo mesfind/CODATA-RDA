@@ -1,0 +1,22 @@
+]0;/afs/ictp.it/home/m/mchaka/Documents/RProjects/Mchaka-ACmchaka@hp83-inf-23 ~/Documents/RProjects/Mchaka-AC $ GIT[K[K[Kgt[Kit add .
+]0;/afs/ictp.it/home/m/mchaka/Documents/RProjects/Mchaka-ACmchaka@hp83-inf-23 ~/Documents/RProjects/Mchaka-AC $ git commit -a[Km "u[Ki[Kother updated DMP"
+[master fbc75ad] other updated DMP
+ 6 files changed, 1004 insertions(+), 57 deletions(-)
+ create mode 100644 Base_2013_day1.html
+ create mode 100644 Base_2013_day2_in.html
+ create mode 100644 Mchaka-AC.Rproj
+ create mode 100644 equations-child.html
+]0;/afs/ictp.it/home/m/mchaka/Documents/RProjects/Mchaka-ACmchaka@hp83-inf-23 ~/Documents/RProjects/Mchaka-AC $ git push orighi[K[Kin master
+error: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': mesfind
+error: cannot run rpostback-askpass: No such file or directory
+Password for 'https://mesfind@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 8 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.37 MiB | 0 bytes/s, done.
+Total 7 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/5)   [Kremote: Resolving deltas:  40% (2/5)   [Kremote: Resolving deltas:  60% (3/5)   [Kremote: Resolving deltas:  80% (4/5)   [Kremote: Resolving deltas: 100% (5/5)   [Kremote: Resolving deltas: 100% (5/5), completed with 3 local objects.[K
+To https://github.com/mesfind/MChaka-AC.git
+   b22c8d0..fbc75ad  master -> master
+]0;/afs/ictp.it/home/m/mchaka/Documents/RProjects/Mchaka-ACmchaka@hp83-inf-23 ~/Documents/RProjects/Mchaka-AC $ 

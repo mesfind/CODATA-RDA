@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533820334642.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CA71B3A7",
+    "lastKnownWriteTime" : 1533812937,
+    "last_content_update" : 1533812937,
+    "path" : "~/Documents/Mchaka-AC/scripts/write_bib.R",
+    "project_path" : "scripts/write_bib.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
