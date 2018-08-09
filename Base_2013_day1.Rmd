@@ -25,7 +25,11 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE,message=FALSE, cache=FALSE)
 ```{r add_dataset}
 # Add the dataset of DOAJ Seal journals
 
+<<<<<<< HEAD
 doaj_seal <- read_csv('data/DOAJ_Seal.csv')
+=======
+doaj_seal <- read_csv('DOAJ_Seal.csv')
+>>>>>>> fbc75ad2f4e3ffd2df9f955a8d4e399eb7e881af
 
 ```
 

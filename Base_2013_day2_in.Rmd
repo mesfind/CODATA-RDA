@@ -15,7 +15,10 @@ output:
 bibliography:
 - oajournals.bib
 - packages.bib
+<<<<<<< HEAD
 
+=======
+>>>>>>> fbc75ad2f4e3ffd2df9f955a8d4e399eb7e881af
 ---
 
 
