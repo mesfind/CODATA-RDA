@@ -241,7 +241,25 @@ g + scale_color_grey()
 
 g + scale_color_viridis_d()
 
-# website : colorbrowser2.org
+# website : http://colorbrewer2.org
 
 g + scale_color
 
+library(grid)
+vplayout = function(x,y)
+  viewport(layout.pos.row = x, layout.pos.col = y)
+
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(100,100)))
+
+print(g, vp = vplayout(1:100, 1:100))
+print(g, vp = vplayout(1, 1:2))
+
+
+## themes
+
+library(hrbrthemes)
+g
+
+g + scale_color_ipsum()+
+  theme_ipsum_rc()
