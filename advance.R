@@ -174,9 +174,9 @@ ggplot(bond, aes(x = Actor, y = Alcohol_Units)) +
   ylim(c(0, 20))
 
 
-install.packages("hrbrthemes")
-install.packages("plotly")
-install.packages("ggridges")
+# install.packages("hrbrthemes")
+# install.packages("plotly")
+# install.packages("ggridges")
 library(plotly)
 library(ggridges)
 library(hrbrthemes)
@@ -192,10 +192,7 @@ colnames(movies)
 g + facet_grid(Comedy ~ .)
 
 
-
 g + facet_grid(. ~ Animation)
-
-
 
 g + facet_grid(Comedy ~ Animation)
 
@@ -220,38 +217,23 @@ ggplot(movies,
                   expand = c(0.01, 0))
 
 # Axis Scales
-
+#load the data
 data(movies, package = "ggplot2movies")
-known_budget = movies[!is.na(movies), ]
+# Canvas & limits
+g = ggplot(subset(movies, budget > 0), aes(y=length))+
+  ylim(0,500)
+g + geom_point(aes(x = budget),alpha=0.2)
 
-h = ggplot(known_budget, aes(y = length)) + 
-  ylim(0, 500)
-h1 = h + 
-  geom_point(aes(budget), alpha = 0.2)
-
-h1
-
-h2 = h + geom_point(aes(log10(budget)), alpha = 0.2)
-
-h2
-
-
-
-
-df = overplot_data(n=20000)             
-
-(h <- ggplot(df) + 
-    geom_point(aes(x,y)))
-
-
-h + geom_jitter(aes(x,y))
-
-h + stat_density2d(aes(x,y, fill=..density..),
-                   contour=FALSE, geom="tile")
-h + stat_bin2d(aes(x,y, fill=..density..),
-                   contour=FALSE, geom="tile")
-
-h + stat_binhex(aes(x,y, fill=..density..),
-               contour=FALSE, geom="tile")
-
+g + geom_point(aes(x = budget),alpha=0.2)+
+  scale_x_log10()+
+  scale_y_continuous(breaks = seq(0, 500, 100),
+                     minor_breaks = seq(0, 500, 25),
+                     limits = c(0, 500),
+                     labels = c(0, "", "", "", "", 500),
+                     name = "Movie Length")
   
+  
+
+
+
+
