@@ -85,4 +85,38 @@ g + geom_violin()+
 
 # Box plot aesthetic by weight
 (g + geom_boxplot(aes(weight=Kills)))
-             
+
+# install.packages("ggrepel")
+
+library(ggrepel)
+library(tidyverse)
+data(bond, package = "jrGgplot2")
+
+ggplot(bond, aes(Kills, Alcohol_Units))+
+  geom_point() +
+  geom_text_repel(aes(label=Actor))
+
+
+
+
+
+
+
+
+df = overplot_data(n=20000)             
+
+(h <- ggplot(df) + 
+    geom_point(aes(x,y)))
+
+
+h + geom_jitter(aes(x,y))
+
+h + stat_density2d(aes(x,y, fill=..density..),
+                   contour=FALSE, geom="tile")
+h + stat_bin2d(aes(x,y, fill=..density..),
+                   contour=FALSE, geom="tile")
+
+h + stat_binhex(aes(x,y, fill=..density..),
+               contour=FALSE, geom="tile")
+
+  
