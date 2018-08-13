@@ -233,7 +233,15 @@ g + geom_point(aes(x = budget),alpha=0.2)+
                      name = "Movie Length")
   
   
+data(bond, package = "jrGgplot2")
+(g = ggplot(data = bond, aes(x = Alcohol_Units, y = Kills))+
+    geom_point(aes(color=Actor)))
 
+g + scale_color_grey()
 
+g + scale_color_viridis_d()
 
+# website : colorbrowser2.org
+
+g + scale_color
 
