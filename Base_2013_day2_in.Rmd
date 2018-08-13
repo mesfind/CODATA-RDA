@@ -1,6 +1,6 @@
 ---
 title: "Data Management Plan for the Study 'Do Reputable Open Access Journals Require Open Data Sharing'?"
-author: "Mesfin Diro, Addis Ababa University"
+author: "Mesfin Diro, `r params$institution`"
 date: "`r format(Sys.Date(), '%A, %B %d, %Y')`"
 output:
   html_document:
@@ -15,22 +15,30 @@ output:
 bibliography:
 - oajournals.bib
 - packages.bib
-<<<<<<< HEAD
-
-=======
->>>>>>> fbc75ad2f4e3ffd2df9f955a8d4e399eb7e881af
+params: 
+  institution: 
+    choices: 
+    - International Centre for Theoretical Physics 
+    - CODATA-RDA Summer School
+    - Elsevier Inc
+    - California Institute of Technology
+    - Addis Ababa University
+    input: select
+    label: 'Institution:'
+    value: Addis Ababa University
 ---
-
-
 *****
-
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 ```{r setup, include=FALSE, echo = FALSE}
 
 # Load packages used in this exercise
 library(tidyverse)
 library(rmarkdown)
 library(DT)
+library(shiny)
 ```
+
+*****
 
 ```{r global_options, include=FALSE}
 # Set global options for chunk options
@@ -267,9 +275,19 @@ doaj_seal %>%
 
 #### Principal Investigator's BioSketch
 
-This is auto-populated from your ORCID profile using the  rorcid package. (cite the package).
 
-||> insert code from insert_orcid.R <||
+```{r orcid-bio, echo = FALSE}
+library ('rorcid')
+library('httpuv')
+# 
+token <- orcid_auth(scope = "/authenticate", reauth = FALSE, redirect_uri = getOption("rorcid.redirect_uri"))
+
+res <- orcid_bio(orcid = "0000-0003-4248-9644")
+bio <- res$'0000-0003-4248-9644'$'content'
+
+```
+
+`r bio`
 
 
 # References
