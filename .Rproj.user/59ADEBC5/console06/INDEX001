@@ -1,1 +1,1 @@
-[]
+[{"allow_restart":true,"alt_buffer":false,"autoclose":0,"buffered_output":"\n","caption":"Terminal 1","channel_id":"4994","channel_mode":1,"child_procs":false,"cols":160,"cwd":"~/Documents/Mchaka-AC","exit_code":null,"handle":"6C803D54","interaction_mode":2,"max_output_lines":1000,"restarted":true,"rows":17,"shell_type":7,"show_on_output":false,"terminal_sequence":1,"title":"/afs/ictp.it/home/m/mchaka/Documents/Mchaka-AC","track_env":true,"zombie":false}]

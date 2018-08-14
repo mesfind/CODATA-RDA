@@ -270,9 +270,10 @@ colnames(aphids)
 head(aphids
      )
 
-(g1 <- ggplot(aphids)+
-  geom_line(color=factor(Block))+
-  facet_grid(Water ~ Nitrogen))
+(g1 <- ggplot(aphids, aes(Block,Aphids , color=factor(Block) ))+
+  geom_line()+
+  geom_point()+
+  facet_grid(Nitrogen ~ Water ))
 
 # 
 
