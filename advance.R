@@ -263,3 +263,41 @@ g
 
 g + scale_color_ipsum()+
   theme_ipsum_rc()
+
+
+data(aphids, package="jrGgplot2")
+colnames(aphids)
+head(aphids
+     )
+
+(g1 <- ggplot(aphids)+
+  geom_line(color=factor(Block))+
+  facet_grid(Water ~ Nitrogen))
+
+# 
+
+
+# install.packages('devtools')
+# devtools::install_github("jjallaire/sigma")
+
+library(shiny)
+library(sigma)
+
+gexf <- system.file("examples/ediaspora.gexf.xml", package = "sigma")
+
+ui = shinyUI(fluidPage(
+  checkboxInput("drawEdges", "Draw Edges", value = TRUE),
+  checkboxInput("drawNodes", "Draw Nodes", value = TRUE),
+  sigmaOutput('sigma')
+))
+
+server = function(input, output) {
+  output$sigma <- renderSigma(
+    sigma(gexf, 
+          drawEdges = input$drawEdges, 
+          drawNodes = input$drawNodes)
+  )
+}
+
+shinyApp(ui = ui, server = server)
+
