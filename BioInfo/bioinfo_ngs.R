@@ -11,9 +11,6 @@
 # biocLite("BSgenome.Hsapiens.UCSC.hg38")
 # biocLite("DiffBind")
 # biocLite('MotifDb')
-
-
-
 library(tidyverse)
 library(ggplot2)
 library(rafalib)
@@ -27,28 +24,12 @@ View(dataSamples)
 summary(dataSamples)
 
 ggplot(data=dataSamples) +
-  geom_point(aes(x = Sample, y = ReadCount), size = 3) +
-  stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
-  labs(x = "Sample", y = "Read Count", title = "All read counts") +
-  theme(plot.title = element_text(hjust=0.5))
-
-ggplot(data=dataSamples) +
-  facet_grid( Week~ Treatment) +
+  facet_grid( ~ Treatment) +
   geom_point(aes(x = Sample, y = ReadCount, colour = Treatment), size = 3) +
   scale_color_manual(values=c("blue", "green", "red")) +
   stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
   labs(x = "Sample", y = "Read Count", title = "All read counts") +
   theme(plot.title = element_text(hjust=0.5))
-
-
-ggplot(data=dataSamples) +
-  facet_grid( Lane ~ Treatment) +
-  geom_point(aes(x = Sample, y = ReadCount, colour = Treatment), size = 3) +
-  scale_color_manual(values=c("blue", "green", "red")) +
-  stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
-  labs(x = "Sample", y = "Read Count", title = "All read counts") +
-  theme(plot.title = element_text(hjust=0.5))
-
 
 ggplot(data=dataSamples) +
   facet_grid(Student ~ Treatment) +
@@ -56,6 +37,36 @@ ggplot(data=dataSamples) +
   scale_color_manual(values=c("blue", "green", "red")) +
   stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
   labs(x = "Sample", y = "Read Count", title = "ReadCounts ~ Treatment + Student") +
+  theme(plot.title = element_text(hjust=0.5))
+
+
+
+ggplot(data=dataSamples) +
+  facet_grid(Week ~ Treatment) +
+  geom_point(aes(x = Sample, y = ReadCount, colour = Treatment), size = 3) +
+  scale_color_manual(values=c("blue", "green", "red")) +
+  stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
+  labs(x = "Sample", y = "Read Count", title = "ReadCounts ~ Treatment + Week") +
+  theme(plot.title = element_text(hjust=0.5))
+
+
+
+
+ggplot(data=dataSamples) +
+  facet_grid(Lane ~ Treatment) +
+  geom_point(aes(x = Sample, y = ReadCount, colour = Treatment), size = 3) +
+  scale_color_manual(values=c("blue", "green", "red")) +
+  stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
+  labs(x = "Sample", y = "Read Count", title = "ReadCounts ~ Treatment + Lane") +
+  theme(plot.title = element_text(hjust=0.5))
+
+?set.seed
+ggplot(data=dataSamples) +
+  facet_grid(Library_Prep_Date ~ Treatment) +
+  geom_point(aes(x = Sample, y = ReadCount, colour = Treatment), size = 3) +
+  scale_color_manual(values=c("blue", "green", "red")) +
+  stat_smooth(aes(x = Sample, y = ReadCount), method = "lm", formula = y ~ x, se = TRUE) +
+  labs(x = "Sample", y = "Read Count", title = "ReadCounts ~ Treatment + Library_Prep_Date") +
   theme(plot.title = element_text(hjust=0.5))
 
 
@@ -148,3 +159,10 @@ print(tstat)
 t.test(treatment, control)
 
 t.test(treatment,control, conf.level = 0.95)
+
+
+
+
+
+
+
