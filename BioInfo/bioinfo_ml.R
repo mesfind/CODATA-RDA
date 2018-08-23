@@ -2,6 +2,7 @@
  biocLite()
 # 
  biocLite("factoextra")
+ biocLite("edgeR")
 
 directory <- "/afs/ictp.it/home/m/mchaka/Documents/CODATA-RDA/BioInfo/"
 setwd(directory)
@@ -87,7 +88,7 @@ summary(irisData)
 # a) linear algorithms
 ?train
 set.seed(7)
-fit.lda <- train(Species~., data=irisData, method="lda", trControl=trainControl())
+fit.lda <- train(Species~., data=irisData, method="lda",trControl=trainControl())
 # b) nonlinear algorithms
 # CART
 set.seed(7)
@@ -110,3 +111,10 @@ dotplot(results)
 
 # summarize Best Model
 print(fit.lda)
+
+# estimate skill of LDA on the validation dataset
+predictions <- predict(fit.lda, validation)
+confusionMatrix(predictions, validation$Species)
+
+
+libra

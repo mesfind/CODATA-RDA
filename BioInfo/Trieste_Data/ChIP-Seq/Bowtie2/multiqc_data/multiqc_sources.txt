@@ -1,0 +1,9 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	chr19-IMR90-H3K4me3-1	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-IMR90-H3K4me3-1_fastqc.zip
+FastQC	all_sections	chr19-H1-Input	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-H1-Input_fastqc.zip
+FastQC	all_sections	chr19-H1-H3K4me3-1	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-H1-H3K4me3-1_fastqc.zip
+FastQC	all_sections	chr19-IMR90-H3K4me3-2	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-IMR90-H3K4me3-2_fastqc.zip
+FastQC	all_sections	chr19-H1-H3K4me3-2	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-H1-H3K4me3-2_fastqc.zip
+FastQC	all_sections	chr19-H1-Input-2	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-H1-Input-2_fastqc.zip
+FastQC	all_sections	chr19-H1-H3K4me3-3	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-H1-H3K4me3-3_fastqc.zip
+FastQC	all_sections	chr19-IMR90-Input	/homes/schweike/genomes/human/Epigenomics/EpiCourse2018_Data/Bowtie2/chr19-IMR90-Input_fastqc.zip
