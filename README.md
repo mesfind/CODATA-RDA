@@ -1,4 +1,4 @@
-CODATA/RDA : Reproducible Research 
+CODATA-RDA Summer School 2018: Reproducible Research 
 =======
 
 
