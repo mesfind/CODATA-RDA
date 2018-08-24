@@ -19,3 +19,36 @@ ggscatter(dataSet, x = "alm1", y = "mcg",
           add = "reg.line", conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson",
           xlab = "alm1", ylab = "mcg")
+
+# Null hypothesis: the data are normally distributed
+# Alternative hypothesis: the data are not normally distributed
+
+# Shapiro-Wilk normality test for alm1
+shapiro.test(dataSet$alm1) # => p = 1.431e-08
+
+# Shapiro-Wilk normality test for mcg
+shapiro.test(dataSet$mcg) # => p = 8.231e-06
+
+# ALM1
+ggqqplot(dataSet$alm1, ylab = "ALM1")
+
+# MCG
+ggqqplot(dataSet$mcg, ylab = "MCG")
+
+res <- cor.test(dataSet$alm1, dataSet$mcg, method = "pearson")
+res
+
+ggpairs(dataSet,
+        columns = c("alm1", "mcg"),
+        upper = list(continuous = wrap("cor", size = 10)),
+        lower = list(continuous = "smooth"))
+
+ggpairs(dataSet,
+        columns = c("alm2", "alm1"),
+        upper = list(continuous = wrap("cor", size = 10)),
+        lower = list(continuous = "smooth"))
+
+ggpairs(dataSet,
+        columns = c("alm1", "alm2", "mcg"),
+        upper = list(continuous = wrap("cor", size = 10)),
+        lower = list(continuous = "smooth"))
